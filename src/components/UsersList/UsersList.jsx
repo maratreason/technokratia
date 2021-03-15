@@ -10,8 +10,6 @@ const UsersList = () => {
 		setUsers(data);
 	};
 
-	console.log(users);
-
 	useEffect(() => {
 		fetchUsers();
 	}, []);
