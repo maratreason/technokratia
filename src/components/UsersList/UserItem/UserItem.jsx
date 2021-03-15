@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { CardActions, Card, CardContent, Typography, Avatar } from "@material-ui/core";
-import { formatMoney, getFullName, updatedTime } from "../../../utils/utils";
+import { formatMoney, getFullName, updatedTime, formatDate } from "../../../utils/utils";
 import Modal from "../../Modal/Modal";
 
 import imageSrc from "../../../assets/15.jpg";
@@ -66,7 +66,7 @@ const UserItem = (props) => {
 				</CardContent>
 				<CardActions>
 					<Typography className={classes.changed} color="textSecondary">
-						Последнее изменение: {updatedTime(lastUpdatedAt)}
+						Последнее изменение: {formatDate(lastUpdatedAt)}
 					</Typography>
 					<Typography className={classes.describe}>Подписка активна</Typography>
 				</CardActions>
